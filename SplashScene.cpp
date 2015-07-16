@@ -31,14 +31,14 @@ bool SplashScene::init()
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
-    this->scheduleOnce( schedule_selector(SplashScene::GotoMainMenuScene),DISPLAY_TIME_SPLASH_SCENE);
+    this->scheduleOnce( schedule_selector(SplashScene::GoToMainMenuScene),DISPLAY_TIME_SPLASH_SCENE);
     auto backgroundSprite = Sprite::create("Splash Screen.png");
-    backgroundSprite = setPosition( Point(visibleSize.width/2 + origin.x, visibleSize.height /2 + origin.y));
+    backgroundSprite->setPosition( Point( visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y) );
     this->addChild(backgroundSprite);
     return true;
 }
 
-void SplashScene::GotoMainMenuScene(<#float dt#>)
+void SplashScene::GoToMainMenuScene(float dt)
 {
     auto scene = MainMenuScene::createScene();
     

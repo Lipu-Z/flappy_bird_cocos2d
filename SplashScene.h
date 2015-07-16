@@ -16,7 +16,7 @@ public:
     CREATE_FUNC(SplashScene);
     
 private:
-    void GotoMainMenuScene(float dt);
+    void GoToMainMenuScene(float dt);
 };
 
 #endif // __SPLASH_SCENE_H__
